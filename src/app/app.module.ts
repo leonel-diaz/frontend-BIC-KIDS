@@ -9,9 +9,13 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { LoginComponent } from './components/login/login.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
 import { NavComponent } from './components/nav/nav.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+
+
 
 //rutas
 const appRoutes : Routes =[
+  {path:'inicio',component:InicioComponent},
   { path: 'registro', component:  RegistroComponent},
   { path: 'login', component:  LoginComponent},
 
@@ -24,7 +28,10 @@ const appRoutes : Routes =[
     RegistroComponent,
     LoginComponent,
     UpdateUserComponent,
-    NavComponent
+    NavComponent,
+    InicioComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
