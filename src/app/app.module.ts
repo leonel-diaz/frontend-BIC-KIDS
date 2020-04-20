@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-
+import { UserService } from './service/user.service';
+import { HttpClientModule } from '@angular/common/http'; 
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { RegistroComponent } from './components/registro/registro.component';
@@ -31,14 +33,17 @@ const appRoutes : Routes = [
     NavComponent,
     InicioComponent,
     
-    
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    CommonModule
   ],
-  providers: [],
+  providers: [
+    UserService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

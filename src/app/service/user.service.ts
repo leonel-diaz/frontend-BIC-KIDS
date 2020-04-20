@@ -21,8 +21,8 @@ export class UserService {
     ).pipe( res => res );
   }
 
-/**
-   * Funcion para registrar un nuevo usuario
+  /**
+   * Funcion para iniciar sesion de usuario
    * @param userParams Datos del usuario.
    */
   login(userParams) {

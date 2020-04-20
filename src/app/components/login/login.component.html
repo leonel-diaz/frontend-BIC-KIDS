@@ -1,41 +1,53 @@
-<p>hol mundo </p>
-     
-       
+<!-- 
+<app-inicio></app-inicio>      -->
+<body>
 
-  <div class="modal-dialog text-center">
-    <div class="col 12" >
-      <div class="modal-content">
-         <div class="col 12 user-img" >
-           <img src="../../../assets/images/avatar.png" alt="" >
-         </div>
-  
-         <form #loginForm="ngForm" (ngSubmit)="login()">
-       
-          <h1>Iniciar Sesion</h1>
-          <br>
-  
-            
-         <!--correo-->
-         <input class="input" type="email" id="email" name="email" placeholder="Ingrese su correo electrónico"
-         value="{{ lastUser }}" #email="ngModel" [(ngModel)]="user.email" />
-       <br />
-       <!--password-->
-       <input class="input" type="password" name="password" id="password" placeholder="ingrese su contraseña:"
-         #password="ngModel" [(ngModel)]="user.password" />
-       <br />
-           <div class='form-group'>
-           <div class="row">
+<div class="modal-dialog text-center">
+  <div class="col 12">
+    <div class="modal-content">
+      <!-- <div class="col 12 user-img">
+        <img src="../../../assets/images/avatar.png" alt="">
+      </div> -->
+       <p class="nav" routerLink='inicio'>Inicio</p>
+       <!-- <button   type='submit' class="nav1" routerLink='inicio' >Registro</button> -->
+       <button type='submit' class='nav1' routerLink='inicio'>Cancelar</button>
+      <form class="asas" #loginForm="ngForm" (ngSubmit)="login()">
+
+        <h1 class="titulo" >Ingresar</h1>
+        <br>
+
+        <!--correo-->
+        <input class="inputs" type="email" id="email" name="email" placeholder="Ingrese su correo electrónico:"
+          #email="ngModel" [(ngModel)]="user.email" />
+        <br />
+
+        <!--password-->
+        <input class="input" type="password" name="password" id="password" 
+          #password="ngModel" [(ngModel)]="user.password" />
+        <br />
+
+        
+        <div class='form-group'>
+          <div class="row">
             <div class="col-md-7">
-           <button type='submit' class='btn btn-primary'>Ingresar</button>
+              <button type='submit' id="buttonLogin" class='botones'>Ingresar ></button>
             </div>
-            <button type='submit' class='btn btn-primary' routerLink='inicio'>Cancelar</button>
            
-          
-           </div>
+
+
           </div>
-         
-         </form>
-  
+        </div>
+
+      </form>
+      <button type='submit' class='botoness' routerLink='inicio'>Cancelar</button>
+      <div class="arbol">
+        <img src="../../../assets/images/arbol.png" alt="">
       </div>
+      
     </div>
   </div>
+</div>
+<div class="oso">
+  <img src="../../../assets/images/Group.png" alt="">
+</div>
+</body>
