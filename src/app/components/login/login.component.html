@@ -1,1 +1,41 @@
-<h1>iniciar sesion</h1>
+<p>hol mundo </p>
+     
+       
+
+  <div class="modal-dialog text-center">
+    <div class="col 12" >
+      <div class="modal-content">
+         <div class="col 12 user-img" >
+           <img src="../../../assets/images/avatar.png" alt="" >
+         </div>
+  
+         <form #loginForm="ngForm" (ngSubmit)="login()">
+       
+          <h1>Iniciar Sesion</h1>
+          <br>
+  
+            
+         <!--correo-->
+         <input class="input" type="email" id="email" name="email" placeholder="Ingrese su correo electrónico"
+         value="{{ lastUser }}" #email="ngModel" [(ngModel)]="user.email" />
+       <br />
+       <!--password-->
+       <input class="input" type="password" name="password" id="password" placeholder="ingrese su contraseña:"
+         #password="ngModel" [(ngModel)]="user.password" />
+       <br />
+           <div class='form-group'>
+           <div class="row">
+            <div class="col-md-7">
+           <button type='submit' class='btn btn-primary'>Ingresar</button>
+            </div>
+            <button type='submit' class='btn btn-primary' routerLink='inicio'>Cancelar</button>
+           
+          
+           </div>
+          </div>
+         
+         </form>
+  
+      </div>
+    </div>
+  </div>

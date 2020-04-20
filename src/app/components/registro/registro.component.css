@@ -13,3 +13,6 @@
     background: #f5f0f0;
     margin-top: 50px;
 }
+.modal-dialog text-center{
+    z-index: 123;
+}

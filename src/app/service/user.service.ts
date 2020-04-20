@@ -21,5 +21,17 @@ export class UserService {
     ).pipe( res => res );
   }
 
-
+/**
+   * Funcion para registrar un nuevo usuario
+   * @param userParams Datos del usuario.
+   */
+  login(userParams) {
+    const params = JSON.stringify(userParams);
+    const options = {
+      headers: new HttpHeaders({ "Content-Type": "application/json" })
+    };
+    return this.http
+      .post(this.apiURL + "/user/login", params, options)
+      .pipe(res => res);
+  }
 }

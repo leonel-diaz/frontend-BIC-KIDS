@@ -1,0 +1,24 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1350px;
+    grid-template-rows:  400px;
+    z-index: 2;
+  }
+  p{
+      font-size: 30px;
+  }
+#jas{
+    padding-top: 10%;
+    padding-left: 3%;
+}
+ 
+
+  .b{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+  }
+ 

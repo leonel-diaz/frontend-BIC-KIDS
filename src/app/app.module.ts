@@ -14,8 +14,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
 
 
 //rutas
-const appRoutes : Routes =[
-  {path:'inicio',component:InicioComponent},
+const appRoutes : Routes = [
+  {path: 'inicio', component:  InicioComponent},
   { path: 'registro', component:  RegistroComponent},
   { path: 'login', component:  LoginComponent},
 
