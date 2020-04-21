@@ -1,51 +1,80 @@
-
 <div class="modal-dialog text-center">
-  <div class="col 12" >
+  <div class="col 12">
     <div class="modal-content">
-       <div class="col 12 user-img" >
-         <img src="../../../assets/images/avatar.png" alt="" >
-       </div>
+      <div class="col 12 user-img">
+        <img src="../../../assets/images/avatar.png" alt="" />
+      </div>
 
-       <form #signUpForm="ngForm" (ngSubmit)="signUp();" class="col 12">
-     
+      <form #signUpForm="ngForm" (ngSubmit)="signUp()" class="col 12">
         <h1>Crear una cuenta</h1>
-        <br>  
-         <label for="firstName"><h3>Nombres</h3> </label>
-         <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Ingresa tu nombre" #firstName="ngModel" [(ngModel)]="user.firstName" required /> <br />
-         
-           
-         <label for="email"> <h3>Correo</h3> </label>
-         <input type="text" class="form-control" id="email" name="email" placeholder="Ingresa tu correo" #email="ngModel" [(ngModel)]="user.email" required  /> <br />
-       
-      
-      
-         <label for="password"> <h3>Contraseña</h3></label>
-         <input type="text" class="form-control" id="password" name="password" placeholder="Ingresa tu contraseña" #password="ngModel" [(ngModel)]="user.password" required /> <br />
-         
+        <br />
+        <label for="name"><h3>Nombres</h3> </label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          placeholder="Ingresa tu nombre"
+          #firstName="ngModel"
+          [(ngModel)]="user.name"
+          required
+        />
+        <br />
 
-         <label for="fecha"> <h3>Ingrese fecha de nacimiento</h3> </label>
-         <input input type="date" class="form-control" name="fecha" placeholder="Ingresa tu apellido" #fecha="ngModel" [(ngModel)]="user.fecha" required /> <br />
+        <label for="email"> <h3>Correo</h3> </label>
+        <input
+          type="text"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="Ingresa tu correo"
+          #email="ngModel"
+          [(ngModel)]="user.email"
+          required
+        />
+        <br />
 
-          
-          <hr>
-    
+        <label for="password"> <h3>Contraseña</h3></label>
+        <input
+          type="text"
+          class="form-control"
+          id="password"
+          name="password"
+          placeholder="Ingresa tu contraseña"
+          #password="ngModel"
+          [(ngModel)]="user.password"
+          required
+        />
+        <br />
 
+        <label for="fechaNacimiento">
+          <h3>Ingrese fecha de nacimiento</h3>
+        </label>
+        <input
+          input
+          type="date"
+          class="form-control"
+          name="fechaNacimiento"
+          placeholder="Ingresa tu apellido"
+          #fecha="ngModel"
+          [(ngModel)]="user.fechaNacimiento"
+          required
+        />
+        <br />
 
-         <div class='form-group'>
-         <div class="row">
-          <div class="col-md-7">
-         <button type='submit' class='btn btn-primary'>registro</button>
+        <hr />
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-7">
+              <button class="btn btn-primary">Registro</button>
+            </div>
+            <button class="btn btn-primary" routerLink="">
+              Volver
+            </button>
           </div>
-          <button type='submit' class='btn btn-primary' routerLink='/login'>ingresar</button>
-         
-        
-         </div>
         </div>
-
-       </form>
-
+      </form>
     </div>
   </div>
 </div>
-
-

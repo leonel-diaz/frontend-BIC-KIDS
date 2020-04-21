@@ -1,38 +1,38 @@
-import {Component, OnInit} from '@angular/core';
-import {User} from '../../models/user';
-import { UserService } from '../../service/user.service'
-
+import { Component, OnInit } from "@angular/core";
+import { User } from "../../models/user";
+import { Router } from "@angular/router";
+import { UserService } from "../../service/user.service";
+import Swal from "sweetalert2";
 
 @Component({
-  selector: 'app-registro',
-  templateUrl: './registro.component.html',
-  styleUrls: ['./registro.component.css']
+  selector: "app-registro",
+  templateUrl: "./registro.component.html",
+  styleUrls: ["./registro.component.css"],
 })
 export class RegistroComponent implements OnInit {
-
   public user: User;
-    constructor(
-    private service: UserService,
-  ) { 
+
+  constructor(private router: Router, private service: UserService) {
     this.user = new User();
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  //metodo registrar usuario
-  signUp(){
-    alert('usuario creado correctamente');
-    this.service.signUp(this.user).subscribe(( res:any ) => {
-       if(res.statusCode != 200){
-         alert('error al crear el usuario');
-       }else{
-         alert('usuario creado correctamente');
-       }
+  signUp() {
+    this.service.signUp(this.user).subscribe((res: any) => {
+      if (res.statusCode !== 200) {
+        Swal.fire({
+          icon: "error",
+          text: "Usuario no se pudo registrar: ",
+        });
+      } else {
+        Swal.fire({
+          icon: "success",
+          text: "Usuario registrado satisfactoriamente: " + this.user.name,
+        });
+
+        this.router.navigate(["login"]);
+      }
     });
   }
-
-
 }
-
-
