@@ -29,25 +29,24 @@ export class LoginComponent implements OnInit {
     console.log("El último usuario registrado: " + this.lastUser);
   }
   login() {
-    alert('holo mundo');
-        // this.service.login(this.user).subscribe((res: any) => {
-        //   switch (res.statusCode) {
-        //     case 400:
-        //       alert("El usuario no esta registrado");
-        //       break;
-        //     case 401:
-        //       alert("Los datos no son correctos");
-        //       break;
-        //     case 200:
-        //       alert("Bienvenido");
-        //       localStorage.setItem("user", JSON.stringify(res.user));
-        //       localStorage.setItem("lastUser", this.lastUser);
-        //       this.router.navigate(["dashboard"]);
-        //       break;
-        //     default:
-        //       alert("Error de conexion");
-        //   }
-        // });
+        this.service.login(this.user).subscribe((res: any) => {
+          switch (res.statusCode) {
+            case 400:
+              alert("El usuario no esta registrado");
+              break;
+            case 401:
+              alert("Los datos no son correctos");
+              break;
+            case 200:
+              alert("Bienvenido");
+              localStorage.setItem("user", JSON.stringify(res.user));
+              localStorage.setItem("lastUser", this.lastUser);
+              // this.router.navigate(["dashboard"]);
+              break;
+            default:
+              alert("Error de conexion");
+          }
+        });
       }
     }
 

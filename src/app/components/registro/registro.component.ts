@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../../models/user';
-//import {UserService} from '../../service/user.service';
+import {UserService} from '../../service/user.service';
 
 
 @Component({
@@ -13,7 +13,7 @@ export class RegistroComponent implements OnInit {
   public user:User;
 
   constructor(
-    //private service: UserService,
+    private service: UserService,
   ) { 
     this.user = new User('','','','','',);
   }
@@ -22,15 +22,15 @@ export class RegistroComponent implements OnInit {
   }
 
   //metodo registrar usuario
-  signUp(){
-    alert('registro correcto');
-    /*this.service.signUp(this.user).subscribe(( res:any ) => {
+  signUp() {
+    // alert('registro correcto');
+    this.service.signUp(this.user).subscribe(( res: any ) => {
        if(res.statusCode != 200){
          alert('error al crear el usuario');
-       }else{
+       } else {
          alert('usuario creado correctamente');
        }
-    });*/
+    });
   }
 
 

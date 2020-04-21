@@ -9,15 +9,15 @@ background-image:  url(../../../assets/images/fondo.jpeg);
 background-size: cover;
 }
 .user-img{
-    margin-top:-40px; 
-    margin-bottom:px;
- }
- .user-img img{
-     width:100px;
-     height: 100px;
-     border-radius: 100px;
+   position: absolute;
+   width: 73px;
+   height: 23px;
+   right: 780px;
+   top: 5px;
+   
    
  }
+ 
 
  .modal-content{
     background: #f5f0f0;
@@ -26,7 +26,7 @@ background-size: cover;
  .asas{
     position: absolute;
 width: 400px;
-height: 500px;
+height: 400px;
 /* left:  px; */
 top: 254px;
 
@@ -119,13 +119,12 @@ box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     line-height: 23px;
     
     color: #F2F2F2;
-background: #167FF2;
+background: rgba(212, 110, 42, 0.877);
  }
  .arbol{
 position: absolute;
 left: 600px;
-/* right: 7.86%; */
-top: 600px;
+top: 500px;
 bottom: 2.48%;
 
 background: #3F3D56;
@@ -133,7 +132,7 @@ background: #3F3D56;
  .oso{
     position: absolute;
     right:1000px ;
-    top: 550px;
+    top: 400px;
     bottom: 2.48%;
     
      }

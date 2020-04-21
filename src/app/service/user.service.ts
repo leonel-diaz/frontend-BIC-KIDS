@@ -6,7 +6,7 @@ import {observable, pipe} from 'rxjs';
 
 @Injectable()
 export class UserService {
-  apiURL = 'http://localhost:3000/api';
+  apiURL = 'http://localhost:3000/bicKids';
   constructor(
     private http: HttpClient
   ) {}
@@ -31,7 +31,7 @@ export class UserService {
       headers: new HttpHeaders({ "Content-Type": "application/json" })
     };
     return this.http
-      .post(this.apiURL + "/user/login", params, options)
+      .post(this.apiURL + "/loginUser", params, options)   
       .pipe(res => res);
   }
 }

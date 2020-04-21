@@ -16,3 +16,41 @@
 .modal-dialog text-center{
     z-index: 123;
 }
+.nav{
+    position: absolute;
+    width: 73px;
+    height: 23px;
+    left: 640px;
+    top: 5px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 23px;
+    
+    color: #F2F2F2;
+ }
+ .nav1{
+    position: absolute;
+    width: 98px;
+    height: 30px;
+    left: 750px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    
+    color: #F2F2F2;
+background: rgba(212, 110, 42, 0.877);
+ }
+ .use-img{
+    position: absolute;
+    width: 73px;
+    height: 23px;
+    right: 780px;
+    top: 5px;
+    
+    
+  }
