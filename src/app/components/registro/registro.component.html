@@ -8,25 +8,29 @@
 
        <form #signUpForm="ngForm" (ngSubmit)="signUp();" class="col 12">
      
-        <h1>crear una cuenta</h1>
+        <h1>Crear una cuenta</h1>
         <br>  
-         <label for="firstName"> <h3>nombres</h3> </label>
+         <label for="firstName"><h3>Nombres</h3> </label>
          <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Ingresa tu nombre" #firstName="ngModel" [(ngModel)]="user.firstName" required /> <br />
          
-         
-         <label for="lastName"> <h3>apellidos</h3> </label>
-         <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Ingresa tu apellido" #lastName="ngModel" [(ngModel)]="user.lastName" required /> <br />
-        
-
-        
-         <label for="email"> <h3>correo</h3> </label>
+           
+         <label for="email"> <h3>Correo</h3> </label>
          <input type="text" class="form-control" id="email" name="email" placeholder="Ingresa tu correo" #email="ngModel" [(ngModel)]="user.email" required  /> <br />
        
       
       
-         <label for="password"> <h3>contraseña</h3></label>
+         <label for="password"> <h3>Contraseña</h3></label>
          <input type="text" class="form-control" id="password" name="password" placeholder="Ingresa tu contraseña" #password="ngModel" [(ngModel)]="user.password" required /> <br />
          
+
+         <label for="fecha"> <h3>Ingrese fecha de nacimiento</h3> </label>
+         <input input type="date" class="form-control" name="fecha" placeholder="Ingresa tu apellido" #fecha="ngModel" [(ngModel)]="user.fecha" required /> <br />
+
+          
+          <hr>
+    
+
+
          <div class='form-group'>
          <div class="row">
           <div class="col-md-7">

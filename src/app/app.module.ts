@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import { HttpClientModule} from '@angular/common/http';
+import { UserService } from './service/user.service';
+
 
 
 import { AppComponent } from './app.component';
@@ -12,6 +15,9 @@ import { NavComponent } from './components/nav/nav.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { NavPeliculasComponent } from './components/nav-peliculas/nav-peliculas.component';
 import { HomePeliculaComponent } from './components/home-pelicula/home-pelicula.component';
+
+
+
 
 
 
@@ -40,9 +46,12 @@ const appRoutes : Routes =[
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

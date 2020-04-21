@@ -4,12 +4,14 @@ import {observable, pipe} from 'rxjs';
 
 
 
+
 @Injectable()
 export class UserService {
   apiURL = 'http://localhost:3000/api';
   constructor(
     private http: HttpClient
   ) {}
+  
   //registrar un nuevo usuaario
   signUp(userParams) {
     const params = JSON.stringify(userParams);
@@ -20,6 +22,7 @@ export class UserService {
       options
     ).pipe( res => res );
   }
+  
 
 
 }
