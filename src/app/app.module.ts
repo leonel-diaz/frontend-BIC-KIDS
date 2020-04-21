@@ -14,6 +14,7 @@ import {NavComponent} from './components/nav/nav.component';
 import {InicioComponent} from './components/inicio/inicio.component';
 import {NavPeliculasComponent} from './components/nav-peliculas/nav-peliculas.component';
 import {HomePeliculaComponent} from './components/home-pelicula/home-pelicula.component';
+import {VideosService} from './service/home.service';
 
 
 //rutas
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     HttpClientModule
   ],
   providers: [
-    UserService
+    UserService,
+    VideosService,
   ],
   bootstrap: [AppComponent]
 })
