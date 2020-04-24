@@ -15,6 +15,8 @@ import {InicioComponent} from './components/inicio/inicio.component';
 import {NavPeliculasComponent} from './components/nav-peliculas/nav-peliculas.component';
 import {HomePeliculaComponent} from './components/home-pelicula/home-pelicula.component';
 import {VideosService} from './service/home.service';
+import { AsociadosComponent } from './components/asociados/asociados.component';
+import { UploadImageComponent } from './components/upload-image/upload-image.component';
 
 
 //rutas
@@ -23,6 +25,8 @@ const appRoutes: Routes = [
   {path: 'registro', component: RegistroComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomePeliculaComponent},
+  {path: 'asociados',component:AsociadosComponent},
+  {path: 'uploadImage',component:UploadImageComponent}
 ];
 
 
@@ -36,6 +40,8 @@ const appRoutes: Routes = [
     InicioComponent,
     NavPeliculasComponent,
     HomePeliculaComponent,
+    AsociadosComponent,
+    UploadImageComponent,
 
 
   ],
