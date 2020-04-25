@@ -58,6 +58,13 @@ main {
   border: 1px solid #FFFFFF;
 }
 
+.input:disabled {
+  cursor: default !important;
+  border: none !important;
+  padding-left: 12px !important;
+  background-color: #d6d6d6;
+}
+
 .form-group, .form-group__buttons {
   display: flex;
   flex-direction: column;

@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {User} from "../../models/user";
-import {UserService} from "../../service/user.service";
-import {Router, RouterLink} from "@angular/router";
-import Swal from "sweetalert2";
+import {User} from '../../models/user';
+import {UserService} from '../../service/user.service';
+import {Router} from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +13,6 @@ export class LoginComponent implements OnInit {
 
   public user: User;
   public lastUser = null;
-  public placeHolder = null;
 
   constructor(
     private router: Router,
@@ -51,7 +50,7 @@ export class LoginComponent implements OnInit {
             icon: 'success',
             text: 'Los datos son correctos ',
           });
-          localStorage.setItem('user', JSON.stringify(res.user));
+          localStorage.setItem('user', JSON.stringify(res.dataUser));
           localStorage.setItem('lastUser', this.lastUser);
 
           this.router.navigate(['/home']);

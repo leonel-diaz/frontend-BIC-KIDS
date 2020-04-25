@@ -1,9 +1,9 @@
 export class User {
-  public _id: String;
-  public name: String;
-  public fechaNacimiento: Date;
-  public email: String;
-  public password: String;
-  public passwordConfirm: String;
-  public image: String;
+  public _id: string;
+  public name: string;
+  public fechaNacimiento: string;
+  public email: string;
+  public password: string;
+  public passwordConfirm: string;
+  public image: string;
 }

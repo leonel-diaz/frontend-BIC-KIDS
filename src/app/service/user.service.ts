@@ -30,7 +30,7 @@ export class UserService {
     const params = JSON.stringify(userParams);
     const options = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
     return this.http.put(
-      `${url_api}/update/:id${userParams._id}`,
+      `${url_api}/users/update/${userParams._id}`,
       params,
       options
     ).pipe(res => res);
