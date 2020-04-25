@@ -1,95 +1,41 @@
-<img
-  src="/assets/images/Vector3.png"
-  alt="Vector3"
-  class="Vector3"
-  width="450px"
-/>
-<img
-  src="/assets/images/Vector5.png"
-  alt="Vector5"
-  class="Vector5"
-  width="450px"
-/>
-<img src="/assets/images/arbol.png" alt="Vector5" class="arbol" width="90px" />
-
-<img src="/assets/images/Group.png" alt="oso" class="oso" />
-
-<img
-  src="/assets/images/logo.jpg"
-  alt="Logo bicKids"
-  class="logo"
-  width="120px"
-/>
-<div class="links">
-  <div class="link" routerLink="/registro">Registro</div>
-  <div class="link" routerLink="/login">Ingresar</div>
-</div>
-<body>
-  <div class="registro">
-    <img
-      src="/assets/images/avataruser.png"
-      alt="circulo"
-      class="circulo"
-      width="80px"
-    />
-    <form #signUpForm="ngForm" (ngSubmit)="signUp()">
-      <div class="TituloRegistro">
-        Crear cuenta
-      </div>
-
-      <h3 class="name">Nombres</h3>
-      <input
-        type="text"
-        class="name"
-        id="name"
-        name="name"
-        #firstName="ngModel"
-        [(ngModel)]="user.name"
-        required
-      />
-      <br />
-
-      <label for="email"> <h3 class="email">Correo electronico</h3> </label>
-      <input
-        type="text"
-        class="email"
-        id="email"
-        name="email"
-        #email="ngModel"
-        [(ngModel)]="user.email"
-        required
-      />
-      <br />
-
-      <label for="password"> <h3 class="password">Contraseña</h3></label>
-      <input
-        type="password"
-        class="password"
-        id="password"
-        name="password"
-        #password="ngModel"
-        [(ngModel)]="user.password"
-        required
-      />
-      <br />
-
-      <label for="fechaNacimiento">
-        <h3 class="fecha">Ingrese fecha de nacimiento</h3>
-      </label>
-      <input
-        input
-        type="date"
-        class="fechaNacimiento"
-        name="fechaNacimiento"
-        placeholder="Ingresa tu apellido"
-        #fecha="ngModel"
-        [(ngModel)]="user.fechaNacimiento"
-        required
-      />
-      <br />
-
-      <button class="boton">Registrarme ></button>
-      <button class="ingresarBoton" routerLink="/login">Ingresar</button>
-    </form>
-  </div>
-</body>
+<main>
+  <app-nav></app-nav>
+  <section class="bg-images">
+    <img src="/assets/bg/bg-top-right.svg" alt="bg-top-right" draggable="false" class="bg-element bg-element__top">
+    <img src="/assets/bg/bg-bottom-left.svg" alt="bg-bottom-left" draggable="false"
+         class="bg-element bg-element__bottom">
+    <img src="/assets/bg/bottom-left.svg" alt="bottom-left" draggable="false"
+         class="bg-element bg-element__bottom bg-child">
+    <img src="/assets/bg/tree.svg" alt="tree" draggable="false" class="bg-element __tree">
+    <img src="/assets/bg/bear.svg" alt="bear" draggable="false" class="bg-element __bear">
+  </section>
+  <form class="form" #signUpForm="ngForm" (ngSubmit)="signUp()">
+    <section class="form-header">
+      <img src="/assets/icons/user.svg" alt="user-icon" draggable="false">
+    </section>
+    <section class="form-group">
+      <h2>Crear cuenta</h2>
+    </section>
+    <section class="form-group">
+      <label for="name">Nombre</label>
+        <input type="text" name="name" id="name" class="input" #name="ngModel" [(ngModel)]="user.name">
+    </section>
+    <section class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input type="email" name="email" id="email" class="input" #email="ngModel" [(ngModel)]="user.email">
+    </section>
+    <section class="form-group">
+      <label for="password">Contraseña</label>
+      <input type="password" name="password" id="password" class="input" #password="ngModel"
+             [(ngModel)]="user.password">
+    </section>
+    <section class="form-group">
+      <label for="date">Fecha de nacimiento</label>
+      <input type="date" name="date" id="date" class="input" #fecha="ngModel" [(ngModel)]="user.fechaNacimiento">
+    </section>
+    <section class="form-group__buttons">
+      <button class="btn-form" type="submit">Registrarme</button>
+      <a href="#" class="btn-form__outline" [routerLink]="['/login']">Ingresar</a>
+    </section>
+  </form>
+</main>
