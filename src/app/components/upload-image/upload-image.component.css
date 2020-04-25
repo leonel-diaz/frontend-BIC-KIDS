@@ -1,3 +1,10 @@
+body{
+    background-image: url(../../../assets/images/fondo3.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+ 
+    
+}
 form img{
     height: 300px;
     width: 370px;
@@ -8,4 +15,17 @@ form img{
 #imagen{
     cursor: pointer;
     
+}
+.imagenOso{
+    position: absolute;
+    left: 280px;
+    top: 220px;
+}
+.imagenOso img{
+    height: 300px;
+}
+.imagenPlanta{
+    position: absolute;
+    left: 1150px;
+    top: 500px;
 }
