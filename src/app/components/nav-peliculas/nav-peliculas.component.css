@@ -1,6 +1,6 @@
 :root {
 	--rojo: #E50914;
-	--fondo: #141414;
+	--fondo: #030202;
 }
 
 * {
@@ -10,19 +10,19 @@
 }
 
 body {
-	background: #141414;
+	/* background: #141414; */
 	font-family: 'Open Sans', sans-serif;
 }
 
 .contenedor {
 	width: 100%;
-	margin: auto;
+	margin: 20px;
 }
 
 header {
 	padding: 10px 0;
    
-    background: #141414;
+    /* background: #141414; */
 }
 .favorito a{
 	text-decoration: none;
@@ -59,7 +59,7 @@ header .contenedor {
 }
 
 header .logotipo  img {
-	height: 120px;
+	height: 80px;
 	width: 120px;
 	border-radius: 100px;
 	margin-left: 20px;

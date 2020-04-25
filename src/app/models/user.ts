@@ -4,5 +4,6 @@ export class User {
   public fechaNacimiento: Date;
   public email: String;
   public password: String;
+  public passwordConfirm: String;
   public image: String;
 }

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {VideosService} from '../../service/home.service';
+import {VideosService} from '../../service/videos.service';
 
+// @ts-ignore
 @Component({
   selector: 'app-home-pelicula',
   templateUrl: './home-pelicula.component.html',
@@ -27,7 +28,7 @@ export class HomePeliculaComponent implements OnInit {
   }
 
   ngOnInit() {
- 
+
   }
 
 }

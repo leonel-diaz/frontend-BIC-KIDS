@@ -13,7 +13,8 @@ import {NavComponent} from './components/nav/nav.component';
 import {InicioComponent} from './components/inicio/inicio.component';
 import {NavPeliculasComponent} from './components/nav-peliculas/nav-peliculas.component';
 import {HomePeliculaComponent} from './components/home-pelicula/home-pelicula.component';
-import {VideosService} from './service/home.service';
+import {VideosService} from './service/videos.service';
+import {VerPeliculasComponent} from './components/ver-peliculas/ver-peliculas.component';
 
 
 // Rutas
@@ -24,12 +25,16 @@ const appRoutes: Routes = [
   {path: 'home', component: HomePeliculaComponent},
   {path: 'profile', component: UpdateUserComponent},
   {
+    path: 'movie', component: VerPeliculasComponent,
+  },
+  {
     path: '**',
     redirectTo: 'index',
   }
 ];
 
 
+// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +45,7 @@ const appRoutes: Routes = [
     InicioComponent,
     NavPeliculasComponent,
     HomePeliculaComponent,
+    VerPeliculasComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,5 +59,4 @@ const appRoutes: Routes = [
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }
