@@ -1,50 +1,33 @@
-<body>
+<main>
+  <app-nav></app-nav>
+  <section class="bg-images">
+    <img src="/assets/bg/bg-top-right.svg" alt="bg-top-right" draggable="false" class="bg-element bg-element__top">
+    <img src="/assets/bg/bg-bottom-left.svg" alt="bg-bottom-left" draggable="false"
+         class="bg-element bg-element__bottom">
+    <img src="/assets/bg/bottom-left.svg" alt="bottom-left" draggable="false"
+         class="bg-element bg-element__bottom bg-child">
+    <img src="/assets/bg/movie.svg" alt="tree" draggable="false" class="bg-element __tree __bottom_0">
+    <img src="/assets/bg/bear.svg" alt="bear" draggable="false" class="bg-element __bear">
+  </section>
+  <form class="form" #loginForm="ngForm" (ngSubmit)="login()">
+    <section class="form-header">
+      <img src="/assets/icons/user-check.svg" alt="user-icon" draggable="false">
+    </section>
+    <section class="form-group">
+      <h2>Ingresar</h2>
+    </section>
+    <section class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input type="email" name="email" id="email" class="input" #email="ngModel" [(ngModel)]="user.email">
+    </section>
+    <section class="form-group">
+      <label for="password">Contraseña</label>
+      <input type="password" name="password" id="password" class="input" #email="ngModel" [(ngModel)]="user.password">
+    </section>
+    <section class="form-group__buttons">
+      <button class="btn-form" type="submit">Ingresar</button>
+      <a href="#" class="btn-form__outline" [routerLink]="['/sign-up']">Registrarme</a>
+    </section>
+  </form>
+</main>
 
-    <div class="modal-dialog text-center">
-      <div class="col 12">
-        <div class="modal-content">
-          <div class="col 12 user-img">
-            <img  height="100px" width="100px" src="../../../assets/images/logo.jpg" alt="">
-          </div>
-           <p class="nav" routerLink='inicio'>Inicio</p>
-           <button type='submit' class='nav1' routerLink='inicio'>Registro</button>
-          <form class="asas" #loginForm="ngForm" (ngSubmit)="login()">
-    
-            <h1 class="titulo" >Ingresar</h1>
-            <br>
-    
-            <!--correo-->
-            <input class="inputs" type="email" id="email" name="email" placeholder="Ingrese su correo electrónico:"
-              #email="ngModel" [(ngModel)]="user.email" />
-            <br />
-    
-            <!--password-->
-            <input class="input" type="password" name="password" placeholder="Ingrese su contraseña:" id="password" 
-              #password="ngModel" [(ngModel)]="user.password"  />
-            <br />
-    
-            
-            <div class='form-group'>
-              <div class="row">
-                <div class="col-md-7">
-                  <button type='submit' id="buttonLogin" class='botones'>Ingresar ></button>
-                </div>
-               
-    
-    
-              </div>
-            </div>
-    
-          </form>
-          <button type='submit' class='botoness' routerLink='inicio'>Cancelar</button>
-          <div class="arbol">
-            <img src="../../../assets/images/arbol.png" alt="">
-          </div>
-          
-        </div>
-      </div>
-    </div>
-    <div class="oso">
-      <img src="../../../assets/images/Group.png" alt="">
-    </div>
-    </body>
