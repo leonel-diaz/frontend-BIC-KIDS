@@ -1,13 +1,13 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
+import {url_api} from '../components/globals/api';
 
 @Injectable()
 export class VideosService {
-  url_api = "http://localhost:3000/api";
 
   constructor(private http: HttpClient) { }
 
   all() {
-    return this.http.get(this.url_api + "/videos").pipe(res => res);
+    return this.http.get(url_api + '/videos').pipe(res => res);
   }
 }
