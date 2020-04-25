@@ -1,80 +1,95 @@
-<div class="modal-dialog text-center">
-  <div class="col 12">
-    <div class="modal-content">
-      <div class="col 12 user-img">
-        <img src="../../../assets/images/avatar.png" alt="" />
+<img
+  src="/assets/images/Vector3.png"
+  alt="Vector3"
+  class="Vector3"
+  width="450px"
+/>
+<img
+  src="/assets/images/Vector5.png"
+  alt="Vector5"
+  class="Vector5"
+  width="450px"
+/>
+<img src="/assets/images/arbol.png" alt="Vector5" class="arbol" width="90px" />
+
+<img src="/assets/images/Group.png" alt="oso" class="oso" />
+
+<img
+  src="/assets/images/logo.jpg"
+  alt="Logo bicKids"
+  class="logo"
+  width="120px"
+/>
+<div class="links">
+  <div class="link" routerLink="/registro">Registro</div>
+  <div class="link" routerLink="/login">Ingresar</div>
+</div>
+<body>
+  <div class="registro">
+    <img
+      src="/assets/images/avataruser.png"
+      alt="circulo"
+      class="circulo"
+      width="80px"
+    />
+    <form #signUpForm="ngForm" (ngSubmit)="signUp()">
+      <div class="TituloRegistro">
+        Crear cuenta
       </div>
 
-      <form #signUpForm="ngForm" (ngSubmit)="signUp()" class="col 12">
-        <h1>Crear una cuenta</h1>
-        <br />
-        <label for="name"><h3>Nombres</h3> </label>
-        <input
-          type="text"
-          class="form-control"
-          id="name"
-          name="name"
-          placeholder="Ingresa tu nombre"
-          #firstName="ngModel"
-          [(ngModel)]="user.name"
-          required
-        />
-        <br />
+      <h3 class="name">Nombres</h3>
+      <input
+        type="text"
+        class="name"
+        id="name"
+        name="name"
+        #firstName="ngModel"
+        [(ngModel)]="user.name"
+        required
+      />
+      <br />
 
-        <label for="email"> <h3>Correo</h3> </label>
-        <input
-          type="text"
-          class="form-control"
-          id="email"
-          name="email"
-          placeholder="Ingresa tu correo"
-          #email="ngModel"
-          [(ngModel)]="user.email"
-          required
-        />
-        <br />
+      <label for="email"> <h3 class="email">Correo electronico</h3> </label>
+      <input
+        type="text"
+        class="email"
+        id="email"
+        name="email"
+        #email="ngModel"
+        [(ngModel)]="user.email"
+        required
+      />
+      <br />
 
-        <label for="password"> <h3>Contraseña</h3></label>
-        <input
-          type="text"
-          class="form-control"
-          id="password"
-          name="password"
-          placeholder="Ingresa tu contraseña"
-          #password="ngModel"
-          [(ngModel)]="user.password"
-          required
-        />
-        <br />
+      <label for="password"> <h3 class="password">Contraseña</h3></label>
+      <input
+        type="password"
+        class="password"
+        id="password"
+        name="password"
+        #password="ngModel"
+        [(ngModel)]="user.password"
+        required
+      />
+      <br />
 
-        <label for="fechaNacimiento">
-          <h3>Ingrese fecha de nacimiento</h3>
-        </label>
-        <input
-          input
-          type="date"
-          class="form-control"
-          name="fechaNacimiento"
-          placeholder="Ingresa tu apellido"
-          #fecha="ngModel"
-          [(ngModel)]="user.fechaNacimiento"
-          required
-        />
-        <br />
+      <label for="fechaNacimiento">
+        <h3 class="fecha">Ingrese fecha de nacimiento</h3>
+      </label>
+      <input
+        input
+        type="date"
+        class="fechaNacimiento"
+        name="fechaNacimiento"
+        placeholder="Ingresa tu apellido"
+        #fecha="ngModel"
+        [(ngModel)]="user.fechaNacimiento"
+        required
+      />
+      <br />
 
-        <hr />
-
-        <div class="form-group">
-          <div class="row">
-            <div class="col-md-7">
-              <button class="btn btn-primary">Registro</button>
-            </div>
-            <button class="btn btn-primary" routerLink="">
-              Volver
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
+      <button class="boton">Registrarme ></button>
+      <button class="ingresarBoton" routerLink="/login">Ingresar</button>
+    </form>
   </div>
-</div>
+</body>
