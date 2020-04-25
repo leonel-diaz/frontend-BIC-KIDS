@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { User } from '../../models/user';
-import { UserService } from '../../service/user.service';
+import {Component, OnInit} from '@angular/core';
+import {UserService} from '../../service/user.service';
 
 
 @Component({
@@ -9,12 +8,12 @@ import { UserService } from '../../service/user.service';
   styleUrls: ['./update-user.component.css']
 })
 export class UpdateUserComponent implements OnInit {
- 
-  constructor() { }
+
+  constructor(private usersService: UserService) {
+  }
 
   ngOnInit(): void {
-  
 
 
-}
+  }
 }

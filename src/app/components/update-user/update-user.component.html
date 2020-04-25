@@ -1,0 +1,35 @@
+<main>
+  <section>
+    <img src="/assets/bg/bg-top-right.svg" alt="bg-top-right" draggable="false" class="bg-element bg-element__top">
+    <img src="/assets/bg/bg-bottom-left.svg" alt="bg-bottom-left" draggable="false"
+         class="bg-element bg-element__bottom">
+    <img src="/assets/bg/bottom-left.svg" alt="bottom-left" draggable="false"
+         class="bg-element bg-element__bottom bg-child">
+    <img src="/assets/bg/tree.svg" alt="tree" draggable="false" class="bg-element __tree">
+    <img src="/assets/bg/bear.svg" alt="bear" draggable="false" class="bg-element __bear">
+  </section>
+  <form action="" class="form">
+    <section class="form-header">
+      <img src="/assets/icons/settings.svg" alt="user-icon" draggable="false">
+    </section>
+    <section class="form-group">
+      <h2>Editar perfil</h2>
+    </section>
+    <section class="form-group">
+      <label for="name">Nombre</label>
+      <input type="text" name="name" id="name" class="input">
+    </section>
+    <section class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input type="email" name="email" id="email" class="input">
+    </section>
+    <section class="form-group">
+      <label for="password">Contraseña</label>
+      <input type="password" name="password" id="password" class="input">
+    </section>
+    <section class="form-group__buttons">
+      <button class="btn-form">Actualizar</button>
+      <a [routerLink]="['/home']" class="btn-form__outline">Volver</a>
+    </section>
+  </form>
+</main>
