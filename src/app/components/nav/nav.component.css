@@ -1,9 +1,47 @@
-.bRegistrar{
-    margin-left: 30px;
-
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  z-index: 10;
 }
-.navbar-brand img{
-    width: 50px;
-    margin-left: 50px;
-    border-radius: 100px;
+
+.nav-brand img {
+  object-fit: cover;
+  width: 70px;
+}
+
+.nav-menu {
+  margin-left: auto;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-menu li {
+  margin-left: 30px;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-menu li a:not(:hover) {
+  opacity: .7;
+}
+
+.btn-login {
+  background: #ffffff36;
+  padding: 8px 30px;
+  border: 2px solid #fff;
 }

@@ -1,22 +1,9 @@
-<!-- Image and text -->
-
-<div class="container-fluit">
-  <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" routerLink="inicio">
-      <img src="assets/images/logo.jpg" />
-    </a>
-    <div class="">
-      <button type="button" class="btn btn-primary" routerLink="login">
-        ingresar
-      </button>
-
-      <button
-        type="button"
-        class="btn btn-primary bRegistrar"
-        routerLink="registro"
-      >
-        registrarse
-      </button>
-    </div>
-  </nav>
-</div>
+<nav class="nav">
+  <a [routerLink]="['/index']" class="nav-brand">
+    <img src="assets/images/logo.jpg"/>
+  </a>
+  <ul class="nav-menu">
+    <li><a [routerLink]="['/sign-up']">Registro</a></li>
+    <li><a class="btn-login" [routerLink]="['/login']">Ingresar</a></li>
+  </ul>
+</nav>
