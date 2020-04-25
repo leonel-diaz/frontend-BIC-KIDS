@@ -1,24 +1,42 @@
-.grid {
-    display: grid;
-    grid-template-columns: 1350px;
-    grid-template-rows:  400px;
-    z-index: 2;
-  }
-  p{
-      font-size: 30px;
-  }
-#jas{
-    padding-top: 10%;
-    padding-left: 3%;
+main {
+  justify-content: normal;
 }
- 
 
-  .b{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: stretch;
-    align-content: stretch;
+.banner {
+  width: 460px;
+  margin-left: 100px;
+  z-index: 5;
+}
+
+.banner h1 {
+  font-family: 'Montserrat', serif;
+  color: #575151;
+  margin-bottom: 12px;
+}
+
+.bg-banner {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 100px;
+  width: 600px;
+}
+
+@media screen and (max-width: 1100px) {
+  .bg-banner {
+    width: 400px;
   }
- 
+}
+
+@media screen and (max-width: 800px) {
+  .bg-banner {
+    opacity: .5;
+  }
+}
+
+@media screen  and (max-width: 600px) {
+  .banner {
+    width: 100%;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
