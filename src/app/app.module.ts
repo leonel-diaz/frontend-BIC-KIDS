@@ -1,10 +1,9 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule, Component} from '@angular/core';
+import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {Routes, RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import {UserService} from './service/user.service';
-
 
 import {AppComponent} from './app.component';
 import {RegistroComponent} from './components/registro/registro.component';
@@ -17,12 +16,17 @@ import {HomePeliculaComponent} from './components/home-pelicula/home-pelicula.co
 import {VideosService} from './service/home.service';
 
 
-//rutas
+// Rutas
 const appRoutes: Routes = [
-  {path: 'inicio', component: InicioComponent},
-  {path: 'registro', component: RegistroComponent},
+  {path: 'index', component: InicioComponent},
+  {path: 'sign-up', component: RegistroComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomePeliculaComponent},
+  {path: 'profile', component: UpdateUserComponent},
+  {
+    path: '**',
+    redirectTo: 'index',
+  }
 ];
 
 
@@ -36,8 +40,6 @@ const appRoutes: Routes = [
     InicioComponent,
     NavPeliculasComponent,
     HomePeliculaComponent,
-
-
   ],
   imports: [
     BrowserModule,
