@@ -1,9 +1,32 @@
-.grid {
-    display: grid;
-    grid-template-columns: 1350px;
-    grid-template-rows:  400px;
-    z-index: 2;
-  }
+
+    body{
+
+      width: 100%;
+      height: 900px;
+      /* left: -151px; */
+      /* top: 0px; */
+      
+      background-image:  url(../../../assets/images/fondocopy.jpeg);
+      background-size: cover;
+    }
+    .user-im{
+      position: absolute;
+      width: 130px;
+      height: 35px;
+      right:1050px ;
+      top: 500px;
+      padding-top: 4px;
+      padding-left: 10px;
+      background-color: #53BBDC;
+
+      font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 24px;
+      color: white;
+    }
+
   p{
       font-size: 30px;
   }
@@ -13,12 +36,56 @@
 }
  
 
+.a{
+  position: absolute;
+          right:800px ;
+          top: 280px;
+          bottom: 2.48%;
+          
+           }
   .b{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: stretch;
-    align-content: stretch;
+    position: absolute;
+    right:200px ;
+    top: 200px;
+    bottom: 2.48%;
+    z-index: 5;
+     }
+     .nav{
+      position: absolute;
+      width: 73px;
+      height: 23px;
+      left: 1100px;
+      top: 8px;
+      font-family: Source Sans Pro;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 25px;
+      text-align: center;
+      color: #F2F2F2;
+   }
+   .nav1{
+      position: absolute;
+      width: 110px;
+      height: 30px;
+      left: 1200px;
+      top:8px;
+      font-family: Source Sans Pro;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 25px;
+      text-align: center;
+      
+      color: #F2F2F2;
+  background: rgba(212, 110, 42, 0.877);
+   }
+   .user-img{
+    position: absolute;
+    width: 73px;
+    height: 23px;
+    left: 10px;
+    top: 0px;
+    
+    
   }
- 

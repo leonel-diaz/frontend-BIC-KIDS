@@ -15,6 +15,9 @@ import {InicioComponent} from './components/inicio/inicio.component';
 import {NavPeliculasComponent} from './components/nav-peliculas/nav-peliculas.component';
 import {HomePeliculaComponent} from './components/home-pelicula/home-pelicula.component';
 import {VideosService} from './service/home.service';
+import { videoService } from './service/video.service';
+import { VerPeliculasComponent } from './components/ver-peliculas/ver-peliculas.component';
+import { UpdateCuentasComponent } from './components/update-cuentas/update-cuentas.component';
 
 
 //rutas
@@ -36,6 +39,8 @@ const appRoutes: Routes = [
     InicioComponent,
     NavPeliculasComponent,
     HomePeliculaComponent,
+    VerPeliculasComponent,
+    UpdateCuentasComponent,
 
 
   ],
@@ -48,6 +53,7 @@ const appRoutes: Routes = [
   providers: [
     UserService,
     VideosService,
+    videoService,
   ],
   bootstrap: [AppComponent]
 })

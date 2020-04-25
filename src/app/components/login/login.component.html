@@ -1,13 +1,14 @@
 <body>
 
-    <div class="modal-dialog text-center">
+    <!-- <div class="modal-dialog text-center"> -->
       <div class="col 12">
-        <div class="modal-content">
-          <div class="col 12 user-img">
+        <!-- <div class="modal-content"> -->
+          <a class="col 12 user-img" routerLink='/inicio'>
             <img  height="100px" width="100px" src="../../../assets/images/logo.jpg" alt="">
-          </div>
-           <p class="nav" routerLink='inicio'>Inicio</p>
-           <button type='submit' class='nav1' routerLink='inicio'>Registro</button>
+          </a>
+       
+           <a class="nav" routerLink='/inicio'>Inicio</a>
+           <a class='nav1' routerLink='/registro'>Registro</a>
           <form class="asas" #loginForm="ngForm" (ngSubmit)="login()">
     
             <h1 class="titulo" >Ingresar</h1>
@@ -36,14 +37,14 @@
             </div>
     
           </form>
-          <button type='submit' class='botoness' routerLink='inicio'>Cancelar</button>
+          <button type='submit' class='botoness' routerLink='/inicio'>Cancelar</button>
           <div class="arbol">
             <img src="../../../assets/images/arbol.png" alt="">
           </div>
           
         </div>
-      </div>
-    </div>
+      <!-- </div> -->
+    <!-- </div> -->
     <div class="oso">
       <img src="../../../assets/images/Group.png" alt="">
     </div>

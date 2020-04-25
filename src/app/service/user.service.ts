@@ -16,7 +16,7 @@ export class UserService {
       headers: new HttpHeaders({"Content-Type": "application/json"}),
     };
     return this.http
-      .post(this.apiURL + "/users/create", params, options)
+      .post(this.apiURL + "/createUser", params, options)
       .pipe((res) => res);
   }
 
@@ -26,9 +26,20 @@ export class UserService {
       headers: new HttpHeaders({ "Content-Type": "application/json" })
     };
     return this.http
-      .post(this.apiURL + "/users/login", params, options)   
+      .post(this.apiURL + "/loginUser", params, options)   
       .pipe(res => res);
   }
+
+  updateUser(userParams) {
+    const params = JSON.stringify(userParams);
+    const options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+    return this.http.put(
+      `${this.apiURL}/update/:id${userParams._id}`,
+      params,
+      options
+    ).pipe( res => res );
+  }
+
 }
 
 

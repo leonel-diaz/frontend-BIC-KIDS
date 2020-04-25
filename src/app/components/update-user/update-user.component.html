@@ -1,0 +1,46 @@
+<section class="dashboard">
+    <!-- <div class="nav">
+        <app-nav-dashboard></app-nav-dashboard>
+    </div>
+   -->
+    <div class="update" id="update">
+      <div class="contentupdate">
+        <div class="titleupdate">
+          <h1 *ngIf="!isError">Actulizar Usuario</h1>
+        </div>
+        <div class="mensajes" id="message" *ngIf="isError"> {{messageError}} </div>
+    
+        <form #updateUserForm="ngForm" (ngSubmit)="updateUser();">
+          <!--usuario-->
+          <label class="input" type="email" name="email" id="email">{{user.email}}</label><BR><BR>
+    
+          <!--nombres-->
+          <input class="input" type="text" name="name" id="name" placeholder="Ingrese su nombre:" required
+            max="20" #name="ngModel" [(ngModel)]="user.name" />
+    
+          <!--fecha-->
+          <input class="input" type="text" name="fecha" id="fecha" placeholder="Ingrese su fecha de nacimiento:" required
+            max="10" #fecha="ngModel" [(ngModel)]="user.fechaNacimiento" />
+    
+          <!--password-->
+          <input class="input" type="password" name="password" id="password" placeholder="Establezca una contraseña:"
+            required max="20" #password="ngModel" [(ngModel)]="user.password" />
+    
+          <!--Confirmar-password-->
+          <input class="input" type="password" name="passwordConfirm" id="passwordConfirm"
+            placeholder="Confirme su contraseña:" required max="20" #passwordConfirm="ngModel"
+            [(ngModel)]="user.passwordConfirm" />
+    
+    
+          <div class="contentButtons">
+            <a routerLink="/dashboard" class="button"> Cancelar </a>
+            <button class="button" id="buttonUpdate">
+              Modificar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  
