@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {VideosService} from '../../service/videos.service';
+import {map} from 'rxjs/operators';
 
 // @ts-ignore
 @Component({
@@ -28,7 +29,8 @@ export class HomePeliculaComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.videosServices.all()
+      .subscribe((response: any) => response.map(item => this.setCategory(item)));
   }
 
 }
