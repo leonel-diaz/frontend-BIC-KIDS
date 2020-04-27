@@ -1,187 +1,226 @@
+<app-nav-home></app-nav-home>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="estilos.css"> -->
 </head>
 <body>
-<main>
-  <div class="pelicula-principal">
-    <div class="contenedor">
-      <h3 class="titulo">toy story 4</h3>
-      <p class="descripcion">
-        Woody siempre ha confiado en su lugar en el mundo y en que su prioridad es cuidar a su hijo, ya sea Andy o
-        Bonnie. Pero cuando Bonnie agrega un nuevo juguete reacio llamado "Forky" a su habitación, una aventura de viaje
-        por carretera junto a viejos y nuevos amigos le mostrará a Woody lo grande que puede ser el mundo para un
-        juguete.
-      </p>
-      <button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button>
-      <button role="button" class="boton"><i class="fas fa-info-circle"></i>Más información</button>
-    </div>
-  </div>
-  <!--carrousel peliculas-->
-  <div class="peliculas-recomendadas contenedor">
-    <div class="contenedor-titulo-controles">
-      <h3>Películas Recomendadas</h3>
-      <div class="indicadores"></div>
-    </div>
+ 
 
-    <div class="contenedor-principal">
-      <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-
-      <div class="contenedor-carousel">
-        <div class="carousel">
-          <div class="pelicula" *ngFor="let movie of movies">
-            <a href="#"><img [src]="'http://localhost:3000/api/videos/getImage/'+ movie.image_url" alt=""></a>
-          </div>
-
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/2.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/3.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/4.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/5.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/6.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/7.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/1.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/2.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/3.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/1.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/2.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/3.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/4.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/5.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/6.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/7.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/1.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/2.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/3.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/4.png" alt=""></a>
-          </div>
-        </div>
+    <div class="pelicula-principal">
+      <div class="contenedor">
+        <h3 class="titulo">TOY STORY 4 </h3>
+        <p class="descripcion">
+          Woody siempre ha tenido claro cuál es su labor en el mundo y cuál es su prioridad: cuidar a su dueño, ya sea Andy o Bonnie. Sin embargo, Woody descubrirá lo grande que puede ser el mundo..
+        </p>
+        <button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button>
+        <button role="button" class="boton"><i class="fas fa-info-circle"></i>Más información</button>
       </div>
-
-
-      <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
     </div>
+
+  <!-- <div class="contenedor"> -->
+  <h1>Peliculas</h1>
+  <div class="wrapper">
+    <section id="section1">
+      <a href="home#section3" class="arrow__btn">‹</a>
+      <div class="item">
+        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+      <img src="../../../assets/images/carrusel/p1.png"/>
+    </div>
+      <div class="item">
+        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+      <img src="../../../assets/images/carrusel/p2.png"/>
+    </div>
+      <div class="item" >
+        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">_ver_</a>
+        <img src="../../../assets/images/carrusel/p3.png"/>
+    </div>
+      <div class="item">
+        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+      <img src="../../../assets/images/carrusel/p4.jpg"/>
+    </div>
+      <div class="item">
+        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+      <img src="../../../assets/images/carrusel/p5.jpg"/>
+    </div>
+      <a href="home#section2" class="arrow__btn">›</a>
+    </section> 
+    <section id="section2">
+      <a href="home#section1" class="arrow__btn">‹</a>
+      <div class="item">
+        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+      <img src="../../../assets/images/carrusel/p6.jpg"/>
+    </div>
+      <div class="item">
+        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+      <img src="../../../assets/images/carrusel/p7.jpg"/>
+    </div>
+      <div class="item">
+        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+      <img src="../../../assets/images/carrusel/p8.jpg"/>
+    </div>
+      <div class="item">
+        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+      <img src="../../../assets/images/carrusel/p9.jpg"/>
+    </div>
+      <div class="item">
+        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+      <img src="../../../assets/images/carrusel/p10.jpg"/>
+    </div>
+      <a href="home#section3" class="arrow__btn">›</a>
+    </section>
+    <section id="section3">
+      <a href="home#section2" class="arrow__btn">‹</a>
+      <div class="item">
+        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+      <img src="../../../assets/images/carrusel/p10.jpg"/>
+    </div>
+      <div class="item">
+        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+      <img src="../../../assets/images/carrusel/p7.jpg"/>
+    </div>
+      <div class="item">
+        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+      <img src="../../../assets/images/carrusel/p11.jpg"/>
+    </div>
+      <div class="item">
+        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+      <img src="../../../assets/images/carrusel/p12.jpg"/>
+    </div>
+      <div class="item">
+        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+      <img src="../../../assets/images/carrusel/p12.jpg"/>
+    </div>
+      <a href="home#section1" class="arrow__btn">›</a>
+    </section>
   </div>
-  <!--carrousel documentales-->
-  <div class="peliculas-recomendadas contenedor">
-    <div class="contenedor-titulo-controles">
-      <h3>Documentales</h3>
-      <div class="indicadores"></div>
+   
+<!-- documentales -->
+<h1>Documentales</h1>
+  <div class="wrapper">
+    <section id="section4">
+      <a href="home#section6" class="arrow__btn">‹</a>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/d1.png"/>
     </div>
-
-    <div class="contenedor-principal">
-      <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-
-      <div class="contenedor-carousel">
-        <div class="carousel">
-          <div class="pelicula" *ngFor="let movie of documentaries">
-            <a href="#"><img [src]="'http://localhost:3000/api/videos/getImage/'+ movie.image_url" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/1.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/2.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/3.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/4.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/5.png" alt=""></a>
-          </div>
-
-        </div>
-      </div>
-
-
-      <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/d2.png"/>
     </div>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/d3.png"/>
+    </div>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/d4.jpg"/>
+    </div>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/d5.jpg"/>
+    </div>
+      <a href="home#section5" class="arrow__btn">›</a>
+    </section>
+    <section id="section5">
+      <a href="home#section4" class="arrow__btn">‹</a>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/d6.jpg"/>
+    </div>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/d7.jpg"/>
+    </div>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/d8.jpg"/>
+    </div>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/d9.jpg"/>
+    </div>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/d1.png"/>
+    </div>
+      <a href="home#section6" class="arrow__btn">›</a>
+    </section>
+    <section id="section6">
+      <a href="home#section5" class="arrow__btn">‹</a>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/d10.jpg"/>
+    </div>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/d7.jpg"/>
+    </div>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/d11.jpg"/>
+    </div>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/d12.jpg"/>
+    </div>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/d12.jpg"/>
+    </div>
+      <a href="home#section4" class="arrow__btn">›</a>
+    </section>
   </div>
-  <!--carrousel series-->
-  <div class="peliculas-recomendadas contenedor">
-    <div class="contenedor-titulo-controles">
-      <h3>series</h3>
-      <div class="indicadores"></div>
-    </div>
-
-    <div class="contenedor-principal">
-      <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-
-      <div class="contenedor-carousel">
-        <div class="carousel">
-          <div class="pelicula" *ngFor="let movie of series">
-            <a href="#"><img [src]="'http://localhost:3000/api/videos/getImage/'+ movie.image_url" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/1.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/2.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/3.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/4.png" alt=""></a>
-          </div>
-          <div class="pelicula">
-            <a href="#"><img src="assets/images/5.png" alt=""></a>
-          </div>
-
-        </div>
-      </div>
-
-
-      <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
-    </div>
+  <!-- Series -->
+<h1>Series</h1>
+<div class="wrapper">
+  <section id="section7">
+    <a href="home#section9" class="arrow__btn">‹</a>
+    <div class="item">
+    <img src="../../../assets/images/carrusel/s1.png"/>
   </div>
-
-</main>
-
+    <div class="item">
+    <img src="../../../assets/images/carrusel/s2.png"/>
+  </div>
+    <div class="item">
+    <img src="../../../assets/images/carrusel/s3.png"/>
+  </div>
+    <div class="item">
+    <img src="../../../assets/images/carrusel/s4.png"/>
+  </div>
+    <div class="item">
+    <img src="../../../assets/images/carrusel/s5.jpg"/>
+  </div>
+    <a href="home#section8" class="arrow__btn">›</a>
+  </section>
+  <section id="section8">
+    <a href="home#section7" class="arrow__btn">‹</a>
+    <div class="item">
+    <img src="../../../assets/images/carrusel/s6.jpg"/>
+  </div>
+    <div class="item">
+    <img src="../../../assets/images/carrusel/s7.jpg"/>
+  </div>
+    <div class="item">
+    <img src="../../../assets/images/carrusel/s8.jpg"/>
+  </div>
+    <div class="item">
+    <img src="../../../assets/images/carrusel/s9.jpg"/>
+  </div>
+    <div class="item">
+    <img src="../../../assets/images/carrusel/s10.jpg"/>
+  </div>
+    <a href="home#section9" class="arrow__btn">›</a>
+  </section>
+  <section id="section9">
+    <a href="home#section8" class="arrow__btn">‹</a>
+    <div class="item">
+    <img src="../../../assets/images/carrusel/s10.jpg"/>
+  </div>
+    <div class="item">
+    <img src="../../../assets/images/carrusel/s11.jpg"/>
+  </div>
+    <div class="item">
+    <img src="../../../assets/images/carrusel/s6.jpg"/>
+  </div>
+    <div class="item">
+    <img src="../../../assets/images/carrusel/s12.jpg"/>
+  </div>
+    <div class="item">
+    <img src="../../../assets/images/carrusel/s12.jpg"/>
+  </div>
+    <a href="home#section7" class="arrow__btn">›</a>
+  </section>
+</div>
+<!-- </div> --> 
 
 </body>
 </html>

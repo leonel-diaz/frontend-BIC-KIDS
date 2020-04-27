@@ -5,11 +5,12 @@
 
 .nav {
   padding: 20px 100px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.178);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  color: #fff;
 }
 
 .nav-menu {

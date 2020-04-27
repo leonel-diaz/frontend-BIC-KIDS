@@ -9,7 +9,7 @@ export class VideosService {
   playingvideo = {
     _id: '',
     name: 'Nombre del video',
-    video: './assets/peliculas/amor-de-red-social.mp4'
+    video: './assets/peliculas/shrek.mp4'
   };
 
   constructor(private http: HttpClient) {
