@@ -32,10 +32,10 @@ export class VideosService {
     const image = document.querySelector('#playImage');
     if (video.paused) {
       video.play();
-      image.setAttribute('src', './assets/images/pause.png');
+      image.setAttribute('src', './assets/images/pause.svg');
     } else {
       video.pause();
-      image.setAttribute('src', './assets/images/play.png');
+    image.setAttribute( 'src', './assets/images/play.png');
     }
   }
 }

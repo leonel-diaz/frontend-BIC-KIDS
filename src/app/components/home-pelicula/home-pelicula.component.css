@@ -5,17 +5,17 @@ html {
   scroll-behavior: smooth;
 }
 body {
-	background-color: rgba(26, 33, 97, 0.95)
-	/* background-color: #fff  */
+	background-color: #fff 
 	;
 }
 
 
 h1 {
 	font-family: Roboto;
- color: black;
-  text-align: center;
-}
+ 
+color:orangered;
+ text-align: center;
+} 
 .item img{
   height: 200px;
   width: 280px;

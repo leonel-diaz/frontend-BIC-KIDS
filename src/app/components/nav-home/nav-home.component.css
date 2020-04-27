@@ -62,6 +62,7 @@
 
 .nav-dropdown {
   position: relative;
+  color: orangered;
 }
 
 .nav-dropdown::after {
