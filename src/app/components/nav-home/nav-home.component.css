@@ -1,0 +1,72 @@
+.nav, .nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  padding: 20px 100px;
+  background: rgba(255, 255, 255, 0.178);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-menu a {
+  text-decoration: none;
+}
+
+.nav-menu li {
+  margin-left: 20px;
+}
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown:hover > .dropdown-list {
+  display: block;
+}
+
+.dropdown-list {
+  position: absolute;
+  display: none;
+  list-style: none;
+  left: 0;
+  width: 100%;
+  padding: 0;
+}
+
+.dropdown-list:hover {
+  display: block;
+}
+
+.dropdown-list li {
+  margin-left: 0;
+}
+
+.dropdown-list li a {
+  cursor: pointer;
+}
+
+.nav-left {
+  margin-left: auto;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown::after {
+  content: url('/assets/icons/chevron-down.svg');
+  position: absolute;
+  top: 2px;
+  right: -23px;
+}

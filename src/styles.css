@@ -1,0 +1,182 @@
+/* You can add global styles to this file, and also import other style files */
+main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.form {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 50px;
+  background: #FEFEFE;
+  box-shadow: -4px 17px 22px rgba(210, 210, 210, 0.29);
+  z-index: 5;
+}
+
+.form-header {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  background: #FEFEFE;
+  border-radius: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -42.5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.form-header img {
+  user-select: none;
+}
+
+.form-group > h2 {
+  font-family: 'Montserrat', serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 55px;
+  text-align: center;
+  color: #979797;
+  margin-top: 20px;
+}
+
+.form-group > .input {
+  padding-left: 10px;
+  width: 100%;
+  height: 40px;
+  background: #F2F2F2;
+  border: 1px solid #FFFFFF;
+}
+
+.input:disabled {
+  cursor: default !important;
+  border: none !important;
+  padding-left: 12px !important;
+  background-color: #d6d6d6;
+}
+
+.form-group, .form-group__buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group__buttons {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.form-group > label {
+  font-family: Source Sans Pro, serif;
+  font-size: 16px;
+  color: #737373;;
+  margin-bottom: 5px;
+}
+
+.btn-form {
+  background: #53BBDC;
+  padding: 8px 30px;
+  border: none;
+  color: #fff;
+}
+
+.btn-form__outline {
+  text-decoration: none !important;
+  font-family: Montserrat, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #434343;
+}
+
+.bg-element {
+  position: absolute;
+  user-select: none;
+  z-index: -1;
+  width: 50%;
+}
+
+.bg-element__top {
+  top: 0;
+  right: 0;
+  width: 500px;
+}
+
+.bg-element__bottom {
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  z-index: 2;
+}
+
+.bg-child {
+  width: 500px;
+  z-index: 1;
+}
+
+.__tree {
+  height: 175px;
+  bottom: 60px;
+  right: -90px;
+}
+
+.__bear {
+  z-index: 3;
+  width: 180px;
+  left: 134px;
+  bottom: 50px;
+}
+
+.__bottom_0 {
+  bottom: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .bg-element__top {
+    width: 700px;
+  }
+
+  .bg-element__bottom.bg-child {
+    width: 700px;
+  }
+
+  .__bear {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 770px) and (max-height: 1060px) {
+  .__bear {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bg-images {
+    opacity: .8;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .form {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 50px 20px;
+  }
+
+  .form .input {
+    height: 50px;
+  }
+}
