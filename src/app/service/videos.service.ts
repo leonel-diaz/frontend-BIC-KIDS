@@ -19,7 +19,7 @@ export class VideosService {
   }
 
   all() {
-    return this.http.get(url_api + '/videos').pipe(res => res);
+    return this.http.get(url_api + '/videos');
   }
 
   /**
