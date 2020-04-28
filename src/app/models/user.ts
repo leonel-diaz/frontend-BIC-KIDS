@@ -6,4 +6,10 @@ export class User {
   public password: string;
   public passwordConfirm: string;
   public image: string;
+  public associates: Array<Associates>;
+}
+
+export class Associates {
+  _id: string;
+  name: string;
 }
