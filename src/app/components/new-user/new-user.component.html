@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="imagenPlanta">
+      <img src="assets/images/arbol.png" alt="" />
+    </div>
+    <div class="vector">
+      <img src="assets/images/Vector3.png" alt="" />
+    </div>
+    <div class="col-lg-4 mx-auto p-4">
+      <div class="card">
+        <div class="card-header">
+          <h3>Agregar perfil asociado</h3>
+        </div>
+        <div class="card-body">
+          <form class="form" #updateUserForm="ngForm" (ngSubmit)="updateUserAssociate();">
+            <div class="form-group">
+              <label for="name"><h3>Nombre</h3></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                placeholder="ingrese nombre"
+                #associates="ngModel"
+                [(ngModel)]="user.associates"
+                required
+              />
+            </div>
+            <h3>Seleccione la imagen</h3>
+      
+            <hr />
+            <button class="btn btn-primary btn-block" type="submit">
+              Actualizars
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <div class="imagenOso">
+    <img src="assets/images/Group.png" alt="" />
+  </div>
+</html>
