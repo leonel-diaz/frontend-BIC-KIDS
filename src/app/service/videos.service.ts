@@ -1,10 +1,13 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {url_api} from '../components/globals/api';
+import {User} from '../models/user';
+import {Router} from '@angular/router';
 
 @Injectable()
 export class VideosService {
   private _token;
+  user: User;
 
   playingvideo = {
     _id: '',
@@ -12,10 +15,23 @@ export class VideosService {
     video: './assets/peliculas/shrek.mp4'
   };
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     if (localStorage.token) {
       this._token = localStorage.getItem('token') || '';
     }
+    this.user = JSON.parse(localStorage.getItem('user'));
+    if (!this.user) {
+      this.router.navigate(['/']);
+    }
+  }
+
+  setPlayingVideo(data) {
+    this.playingvideo = data;
+  }
+
+  getFavorites() {
+    return this.http
+      .get(`${url_api}/videos/favorites/${this.user._id}`);
   }
 
   all() {
@@ -35,7 +51,7 @@ export class VideosService {
       image.setAttribute('src', './assets/images/pause.svg');
     } else {
       video.pause();
-    image.setAttribute( 'src', './assets/images/play.png');
+      image.setAttribute('src', './assets/images/play.png');
     }
   }
 }

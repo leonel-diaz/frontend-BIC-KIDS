@@ -1,0 +1,34 @@
+main {
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+  padding: 100px;
+}
+
+.title {
+  width: 100%;
+  margin-bottom: 20px;
+  color: #f58634;
+  font-weight: bold;
+}
+
+.list-favorites {
+  z-index: 888;
+  width: 100%;
+  display: flex;
+  justify-content: normal;
+  flex-wrap: wrap;
+}
+
+.favorite {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: calc((100% / 4) - 20px);
+  transition: .4s ease-in-out;
+}
+
+.favorite:hover {
+  cursor: pointer;
+  transform: scale(1.10);
+  transition: .4s ease-in-out;
+}
