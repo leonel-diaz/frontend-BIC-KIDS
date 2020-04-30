@@ -12,6 +12,7 @@ export class HomePeliculaComponent implements OnInit {
   movies: any[] = [];
   documentaries: any[] = [];
   series: any[] = [];
+  urlGetImage =  "http://localhost:3000/api/videos/getImage/"; 
 
   constructor(private videosServices: VideosService) { }
 

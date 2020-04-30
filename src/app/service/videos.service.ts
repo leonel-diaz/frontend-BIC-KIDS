@@ -9,7 +9,7 @@ export class VideosService {
   playingvideo = {
     _id: '',
     name: 'Nombre del video',
-    video: './assets/peliculas/shrek.mp4'
+    video: ''
   };
 
   constructor(private http: HttpClient) {
@@ -30,12 +30,5 @@ export class VideosService {
   playvideo() {
     const video: HTMLMediaElement = document.querySelector('#bickids') as HTMLMediaElement;
     const image = document.querySelector('#playImage');
-    if (video.paused) {
-      video.play();
-      image.setAttribute('src', './assets/images/pause.svg');
-    } else {
-      video.pause();
-    image.setAttribute( 'src', './assets/images/play.png');
-    }
   }
 }
