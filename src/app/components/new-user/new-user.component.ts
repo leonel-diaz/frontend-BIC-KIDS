@@ -49,7 +49,7 @@ export class NewUserComponent implements OnInit {
             icon: "success",
             text: "Asociado actualizado correctamente",
           });
-          console.log("Aqui agrega la imagen al front");
+
           this.service
             .saveImage(this.image, this.user._id)
             .subscribe((res: any) => {
@@ -58,6 +58,8 @@ export class NewUserComponent implements OnInit {
               localStorage.setItem("dataUser", JSON.stringify(res.dataUser));
             });
           console.log("----> ", res.dataUser);
+          localStorage.setItem("user", JSON.stringify(res.dataUser));
+          this.router.navigate(["/associates"]);
           break;
         default:
           Swal.fire({
