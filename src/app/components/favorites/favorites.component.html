@@ -1,1 +1,23 @@
-<p>favorites works!</p>
+<main>
+  <app-nav-home></app-nav-home>
+  <section>
+    <img src="/assets/bg/bg-top-right.svg" alt="bg-top-right" draggable="false" class="bg-element bg-element__top">
+    <img src="/assets/bg/bg-bottom-left.svg" alt="bg-bottom-left" draggable="false"
+         class="bg-element bg-element__bottom">
+    <img src="/assets/bg/bottom-left.svg" alt="bottom-left" draggable="false"
+         class="bg-element bg-element__bottom bg-child">
+    <img src="/assets/bg/tree.svg" alt="tree" draggable="false" class="bg-element __tree">
+  </section>
+
+  <section class="title">
+    <h2>Favoritos</h2>
+  </section>
+  <section class="list-favorites">
+    <article class="card favorite" *ngIf="favorites.length === 0; else example">
+      <img class="card-img-top" src="/assets/images/2.png" alt="Favorite 2" (click)="showMovie()">
+    </article>
+    <article class="card favorite" *ngFor="let item of favorites" #example>
+      <img class="card-img-top" src="/assets/images/1.png" alt="Favorite 1"  (click)="showMovie(item)">
+    </article>
+  </section>
+</main>
