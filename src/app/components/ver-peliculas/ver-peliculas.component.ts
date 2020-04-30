@@ -8,6 +8,7 @@ import { VideosService } from '../../service/videos.service';
   styleUrls: ['./ver-peliculas.component.css']
 })
 export class VerPeliculasComponent implements OnInit {
+  movies: any[] = [];
   urlGetVideo =  "http://localhost:3000/api/videos/getVideo/:video"; 
   constructor(public service: VideosService) {
   }

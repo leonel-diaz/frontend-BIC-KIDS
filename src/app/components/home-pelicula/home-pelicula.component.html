@@ -15,7 +15,7 @@
         <h3 class="titulo">Horton </h3>
         <p class="descripcion">
           Horton es un elefante leal y bonachón que vive, junto a otros animales, en la selva de Nool. Un día soleado, mientras se da un baño, de repente oye un ruidito que sale de una diminuta mota de polvo. Allí, descubre una minúscula ciudad llamada Villaquién, habitada por multitud de seres microscópicos y representada por un singular Alcalde
- </p>
+   </p>
         <button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button>
         <button role="button" class="boton"><i class="fas fa-info-circle"></i>Más información</button>
       </div>
@@ -27,7 +27,7 @@
     <section id="section1">
       <a href="home#section3" class="arrow__btn">‹</a>
       <div class="item" *ngFor="let item of   movies ">
-        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie/' + item.id]">ver pelicula</a>
+        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie' + item.id]">ver pelicula</a>
         <img [src]="urlGetImage + item.image_url"/>
     </div>
    
@@ -88,10 +88,21 @@
   <div class="wrapper">
     <section id="section4">
       <a href="home#section6" class="arrow__btn">‹</a>
-      <div class="item" *ngFor="let item of   documentaries ">
-        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie/' + item.id]">ver pelicula</a>
-        <img [src]="urlGetImage + item.image_url"/>
-    </div>
+      <div class="item">
+        <img src="../../../assets/images/carrusel/d1.png"/>
+      </div>
+        <div class="item">
+        <img src="../../../assets/images/carrusel/d2.png"/>
+      </div>
+        <div class="item">
+        <img src="../../../assets/images/carrusel/d3.png"/>
+      </div>
+        <div class="item">
+        <img src="../../../assets/images/carrusel/d4.jpg"/>
+      </div>
+        <div class="item">
+        <img src="../../../assets/images/carrusel/d5.jpg"/>
+      </div>
       <a href="home#section5" class="arrow__btn">›</a>
     </section>
     <section id="section5">
@@ -137,11 +148,21 @@
 <h1>Series</h1>
 <div class="wrapper">
   <section id="section7">
-    <a href="home#section9" class="arrow__btn">‹</a>
-    <div class="item" *ngFor="let item of   series ">
-      <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie' + item.id]">ver pelicula</a>
-      <img [src]="urlGetImage + item.image_url" />
-  </div>
+    <div class="item">
+      <img src="../../../assets/images/carrusel/s1.png"/>
+    </div>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/s2.png"/>
+    </div>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/s3.png"/>
+    </div>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/s4.png"/>
+    </div>
+      <div class="item">
+      <img src="../../../assets/images/carrusel/s5.jpg"/>
+    </div>
 
     <a href="home#section8" class="arrow__btn">›</a>
   </section>

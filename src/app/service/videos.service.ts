@@ -46,15 +46,5 @@ export class VideosService {
   playvideo() {
     const video: HTMLMediaElement = document.querySelector('#bickids') as HTMLMediaElement;
     const image = document.querySelector('#playImage');
-<<<<<<< HEAD
-=======
-    if (video.paused) {
-      video.play();
-      image.setAttribute('src', './assets/images/pause.svg');
-    } else {
-      video.pause();
-      image.setAttribute('src', './assets/images/play.png');
-    }
->>>>>>> 930d44b3e367798696841a5aa96c69d7d00248fd
   }
 }
