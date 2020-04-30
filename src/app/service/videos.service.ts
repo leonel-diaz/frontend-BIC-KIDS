@@ -1,8 +1,8 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {url_api} from '../components/globals/api';
-import {User} from '../models/user';
-import {Router} from '@angular/router';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { url_api } from "../components/globals/api";
+import { User } from "../models/user";
+import { Router } from "@angular/router";
 
 @Injectable()
 export class VideosService {
@@ -10,18 +10,18 @@ export class VideosService {
   user: User;
 
   playingvideo = {
-    _id: '',
-    name: 'Nombre del video',
-    video: ''
+    _id: "",
+    name: "Nombre del video",
+    video: "",
   };
 
   constructor(private http: HttpClient, private router: Router) {
     if (localStorage.token) {
-      this._token = localStorage.getItem('token') || '';
+      this._token = localStorage.getItem("token") || "";
     }
-    this.user = JSON.parse(localStorage.getItem('user'));
+    this.user = JSON.parse(localStorage.getItem("user"));
     if (!this.user) {
-      this.router.navigate(['/']);
+      this.router.navigate(["/"]);
     }
   }
 
@@ -30,12 +30,11 @@ export class VideosService {
   }
 
   getFavorites() {
-    return this.http
-      .get(`${url_api}/videos/favorites/${this.user._id}`);
+    return this.http.get(`${url_api}/videos/favorites/${this.user._id}`);
   }
 
   all() {
-    return this.http.get(url_api + '/videos');
+    return this.http.get(url_api + "/videos");
   }
 
   /**

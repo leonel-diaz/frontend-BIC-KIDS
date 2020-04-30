@@ -59,7 +59,7 @@ export class NewUserComponent implements OnInit {
             });
           console.log("----> ", res.dataUser);
           localStorage.setItem("user", JSON.stringify(res.dataUser));
-          this.router.navigate(["/associates"]);
+          this.router.navigate(["/new-user"]);
           break;
         default:
           Swal.fire({
