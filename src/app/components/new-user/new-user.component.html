@@ -1,62 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="imagenPlanta">
-      <img src="assets/images/arbol.png" alt="" />
-    </div>
-    <div class="vector">
-      <img src="assets/images/Vector3.png" alt="" />
-    </div>
-    <div class="col-lg-4 mx-auto p-4">
-      <div class="card">
-        <div class="card-header">
-          <h3>Agregar perfil asociado</h3>
-        </div>
-        <div class="card-body">
-          <form (submit)="uploadPhoto(nombre)">
-            <div class="form-group">
-              <label for="firsname"><h3>Nombre</h3></label>
-              <input
-                type="text"
-                id="firName"
-                class="firsName"
-                class="form-control"
-                placeholder="ingrese nombre"
-                #nombre
-                required
-              />
-            </div>
-            <h3>Seleccione la imagen</h3>
-            <input
-              type="file"
-              class="d-none"
-              (change)="onPhotoSelected($event)"
-              #photoInput
-            />
-            <img
-              [src]="photoSelected || 'assets/images/iconCamara.png'"
-              class="img-fluit"
-              alt="no image "
-              (click)="photoInput.click()"
-              id="imagen"
-              width="150px"
-              height="150px"
-            />
-            <hr />
-            <button class="btn btn-primary btn-block" [routerLink]="['/home']">
-              upload
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </body>
-  <div class="imagenOso">
-    <img src="assets/images/Group.png" alt="" />
-  </div>
-</html>
+<main>
+  <section>
+    <img
+      src="/assets/bg/bg-top-right.svg"
+      alt="bg-top-right"
+      draggable="false"
+      class="bg-element bg-element__top"
+    />
+    <img
+      src="/assets/bg/bg-bottom-left.svg"
+      alt="bg-bottom-left"
+      draggable="false"
+      class="bg-element bg-element__bottom"
+    />
+    <img
+      src="/assets/bg/bottom-left.svg"
+      alt="bottom-left"
+      draggable="false"
+      class="bg-element bg-element__bottom bg-child"
+    />
+    <img
+      src="/assets/bg/tree.svg"
+      alt="tree"
+      draggable="false"
+      class="bg-element __tree"
+    />
+    <img
+      src="/assets/bg/bear.svg"
+      alt="bear"
+      draggable="false"
+      class="bg-element __bear"
+    />
+  </section>
+  <form
+    class="form"
+    #updateUserForm="ngForm"
+    (ngSubmit)="updateUserAssociate()"
+  >
+    <section class="form-group">
+      <h2>Agregar Asociado</h2>
+    </section>
+
+    <section class="form-group">
+      <label for="name">Nombre</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="input"
+        #name="ngModel"
+        [(ngModel)]="user.associates"
+      />
+    </section>
+    <section>
+      <input
+        type="file"
+        id="image"
+        name="image"
+        accept="image/*"
+        (change)="loadImage($event)"
+      />
+      ---{{ user.image }}<br />
+      <img
+        id="imageUser"
+        src="{{ url + '/users/showImage/' + user.image }}"
+        width="150"
+        height="150"
+      />
+      <br />
+    </section>
+    <section class="form-group__buttons">
+      <button class="btn-form" type="submit">Actualizar</button>
+      <button class="btn-form" type="submit" [routerLink]="['/home']">
+        ir a peliculas
+      </button>
+    </section>
+  </form>
+</main>
