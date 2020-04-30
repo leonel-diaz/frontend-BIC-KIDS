@@ -16,7 +16,7 @@
         <p class="descripcion">
           Horton es un elefante leal y bonachón que vive, junto a otros animales, en la selva de Nool. Un día soleado, mientras se da un baño, de repente oye un ruidito que sale de una diminuta mota de polvo. Allí, descubre una minúscula ciudad llamada Villaquién, habitada por multitud de seres microscópicos y representada por un singular Alcalde
    </p>
-        <button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button>
+        <button role="button" class="boton" (click)="showMovie()"><i class="fas fa-play"></i>Reproducir</button>
         <button role="button" class="boton"><i class="fas fa-info-circle"></i>Más información</button>
       </div>
     </div>
@@ -27,7 +27,7 @@
     <section id="section1">
       <a href="home#section3" class="arrow__btn">‹</a>
       <div class="item" *ngFor="let item of   movies ">
-        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie' + item.id]">ver pelicula</a>
+        <a style="color:rgba(250, 252, 253, 0)" (click)="showMovie()">ver pelicula</a>
         <img [src]="urlGetImage + item.image_url"/>
     </div>
    
@@ -35,24 +35,24 @@
     </section> 
     <section id="section2">
       <a href="home#section1" class="arrow__btn">‹</a>
-      <div class="item">
-        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+      <div class="item">      
+        <a style="color:rgba(250, 252, 253,0)" (click)="showMovie()">ver pelicula</a>
       <img src="../../../assets/images/carrusel/p6.jpg"/>
     </div>
       <div class="item">
-        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+        <a style="color:rgba(250, 252, 253, 0)" (click)="showMovie()">ver pelicula</a>
       <img src="../../../assets/images/carrusel/p7.jpg"/>
     </div>
       <div class="item">
-        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+        <a style="color:rgba(250, 252, 253, 0)" (click)="showMovie()">ver pelicula</a>
       <img src="../../../assets/images/carrusel/p8.jpg"/>
     </div>
       <div class="item">
-        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+        <a style="color:rgba(250, 252, 253, 0)" (click)="showMovie()">ver pelicula</a>
       <img src="../../../assets/images/carrusel/p9.jpg"/>
     </div>
       <div class="item">
-        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+        <a style="color:rgba(250, 252, 253, 0)" (click)="showMovie()">ver pelicula</a>
       <img src="../../../assets/images/carrusel/p10.jpg"/>
     </div>
       <a href="home#section3" class="arrow__btn">›</a>
@@ -60,23 +60,23 @@
     <section id="section3">
       <a href="home#section2" class="arrow__btn">‹</a>
       <div class="item">
-        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+        <a style="color:rgba(250, 252, 253, 0)" (click)="showMovie()">ver pelicula</a>
       <img src="../../../assets/images/carrusel/p10.jpg"/>
     </div>
       <div class="item">
-        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+        <a style="color:rgba(250, 252, 253, 0)" (click)="showMovie()">ver pelicula</a>
       <img src="../../../assets/images/carrusel/p7.jpg"/>
     </div>
       <div class="item">
-        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+        <a style="color:rgba(250, 252, 253, 0)" (click)="showMovie()">ver pelicula</a>
       <img src="../../../assets/images/carrusel/p11.jpg"/>
     </div>
       <div class="item">
-        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+        <a style="color:rgba(250, 252, 253, 0)" (click)="showMovie()">ver pelicula</a>
       <img src="../../../assets/images/carrusel/p12.jpg"/>
     </div>
       <div class="item">
-        <a style="color:rgba(250, 252, 253, 0)" [routerLink]="['/movie']">ver pelicula</a>
+        <a style="color:rgba(250, 252, 253, 0)" (click)="showMovie()">ver pelicula</a>
       <img src="../../../assets/images/carrusel/p12.jpg"/>
     </div>-->
       <a href="home#section1" class="arrow__btn">›</a>

@@ -8,28 +8,34 @@ import { VideosService } from '../../service/videos.service';
   styleUrls: ['./ver-peliculas.component.css']
 })
 export class VerPeliculasComponent implements OnInit {
+  
+  urlGetVideo =  "http://localhost:3000/api/videos/getVideo/"; 
   movies: any[] = [];
-  urlGetVideo =  "http://localhost:3000/api/videos/getVideo/:video"; 
-  constructor(public service: VideosService) {
+  documentaries: any[] = [];
+  series: any[] = [];
+
+  constructor(private videosServices: VideosService) { }
+
+  setCategory(movie) {
+    switch (movie.type) {
+      case 'movie':
+        return this.movies.push(movie);
+      case 'documentary':
+        return this.documentaries.push(movie);
+      case 'serie':
+        return this.series.push(movie);
+      default:
+        return this.movies.push(movie);
+    }
   }
 
-  ngOnInit(): void {
-
-
+  ngOnInit() {
+    this.videosServices.all()
+      .subscribe((response: any) => response.map(item => this.setCategory(item)));
   }
-
-  currentvideo = {
-    _id: this.service.playingvideo._id,
-    name: this.service.playingvideo.name,
-    video: ''
-  };
-
-  setCurrenVideo(video) {
-    this.currentvideo._id = video._id;
-    this.currentvideo.name = video.name;
-    this.currentvideo.video = video._video;
-
-  }
-
 
 }
+  
+
+
+

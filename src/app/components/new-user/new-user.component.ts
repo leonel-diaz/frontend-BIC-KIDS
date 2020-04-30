@@ -32,6 +32,7 @@ export class NewUserComponent implements OnInit {
     this.service.updateUser(this.user).subscribe((res: any) => {
       switch (res.statusCode) {
         case 500:
+
           Swal.fire({
             icon: "error",
             text: "Error en el servidor",
@@ -65,6 +66,7 @@ export class NewUserComponent implements OnInit {
           Swal.fire({
             icon: "error",
             text: "Algo salió mal :(",
+
           });
       }
     });
@@ -76,3 +78,4 @@ export class NewUserComponent implements OnInit {
     this.image = image.target.files[0] as File;
   }
 }
+
