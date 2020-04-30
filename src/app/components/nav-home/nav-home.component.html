@@ -1,6 +1,6 @@
 <nav class="nav">
   <a [routerLink]="['/home']" class="nav-brand">
-    <img src="assets/images/logo2.png" width="70px" height="70px"/>
+    <img src="assets/images/logo2.png" width="70px" height="70px" />
   </a>
   <ul class="nav-menu">
     <li><a [routerLink]="['/home']">Inicio</a></li>
@@ -10,11 +10,16 @@
   </ul>
 
   <ul class="nav-menu nav-left nav-dropdown">
-    <li><a [routerLink]="['/favorites']"><img src="/assets/icons/heart.svg" alt="Favorites"></a></li>
+    <li>
+      <a [routerLink]="['/favorites']"
+        ><img src="/assets/icons/heart.svg" alt="Favorites"
+      /></a>
+    </li>
     <li class="dropdown">
-      {{userName}}
+      {{ userName }}
       <ul class="dropdown-list">
         <li><a [routerLink]="['/profile']">Perfil</a></li>
+        <li><a [routerLink]="['/associates']">Asociados</a></li>
         <li><a (click)="exit()">Cerrar Sesión</a></li>
       </ul>
     </li>
